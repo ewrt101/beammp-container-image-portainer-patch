@@ -27,17 +27,6 @@ RUN ./download-beammp-server.sh $PRE_RELEASE
 FROM docker.io/ubuntu:24.04
 LABEL maintainer="dan dan@radnewt.com"
 
-## Game server parameter and their defaults
-ENV BEAMMP_PORT ""
-ENV BEAMMP_NAME ""
-ENV BEAMMP_MAP ""
-ENV BEAMMP_DESCRIPTION ""
-ENV BEAMMP_MAX_CARS ""
-ENV BEAMMP_MAX_PLAYERS ""
-ENV BEAMMP_PRIVATE ""
-ENV BEAMMP_DEBUG ""
-ENV BEAMMP_AUTH_KEY ""
-ENV TZ "UTC"
 
 # Install game server required packages
 RUN apt update &&  \
