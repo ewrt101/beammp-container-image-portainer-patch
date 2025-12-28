@@ -18,7 +18,7 @@ RUN apt update &&  \
 # AND Download "BeamMP-Server.$CURRENT_OS.$ARCH"
 # Where arch is either x86_64 or arm64
 # And download to current dir as "BeamMP-Server"
-COPY download-beammp-server.sh .
+COPY container-data/download-beammp-server.sh .
 RUN ./download-beammp-server.sh $PRE_RELEASE
 
 ####################
@@ -61,5 +61,5 @@ RUN chown -R 1000:1000 . &&  \
 USER ubuntu
 
 # Specify entrypoint
-COPY entrypoint.sh .
+COPY container-data/entrypoint.sh .
 ENTRYPOINT ["/beammp/entrypoint.sh"]
