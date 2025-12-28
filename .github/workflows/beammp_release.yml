@@ -3,11 +3,6 @@ name: Stable Release Pipe
 on:
   push:
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
-  pull_request:
-    types:
-      - opened
-  schedule:
-    - cron: "0 0 * * 0" # weekly at sunday night
 
 env:
   CONTAINER_FILE: container-data/Containerfile
